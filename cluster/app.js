@@ -33,6 +33,7 @@ if (cluster.isMaster) {
     console.log(`Master ${process.pid} is running`)
     
     // 衍生 worker 进程
+    console.log({numCPUs})
     for (let i = 0; i < numCPUs; i++) {
         cluster.fork()
     }

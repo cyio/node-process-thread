@@ -6,9 +6,10 @@ const start = Date.now()
 const fibo = (n) => {
     return n > 1 ? fibo(n - 1) + fibo(n - 2) : 1
 }
-fibo(num)
+const ans = fibo(num)
 
 parentPort.postMessage({
     pid: process.pid,
+    ans: ans,
     duration: Date.now() - start
 })
